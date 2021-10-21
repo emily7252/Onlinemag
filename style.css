@@ -1,0 +1,383 @@
+/**
+ * projekt: Flexbox tutorial
+ * fil: css/style.css
+ **/
+/* Google fonts (NB: load før :root) */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bai+Jamjuree:wght@200&family=Teko&display=swap');
+/* 'Amatic SC', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bai+Jamjuree:wght@200&family=Teko&family=Ultra&display=swap');
+/* 'Amatic SC', cursive; overskrifter*/
+@import url("https://use.typekit.net/xmr8gdy.css");
+/* 'houschka-rounded', sans-serif; */
+@import url("https://use.typekit.net/ybg6uia.css");
+/* 'monarcha', serif; */
+@import url("https://use.typekit.net/ybg6uia.css");
+
+:root {
+  /* farver */
+  --blue: #a6c2d8;
+  --white: #ffffff;
+  --green: #1ba669;
+  --pink: #a61b58;
+  --red: #f572a9;
+  --brown: #d8bca6;
+  --grey: #cfdce3;
+  /* fonte */
+  --font: 'houschka-rounded', sans-serif;
+  /* brødtekst */
+  --displayH: 'houschka-rounded', sans-serif;
+  /* overskrifter */
+}
+
+body {
+  background-color: var(--blue);
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+/* Typografi */
+h1 {
+  font-family: var(--displayH);
+  text-align: center;
+}
+
+h2 {
+  padding-bottom: 3px;
+}
+
+/*index*/
+.logo {
+  width: 230px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+/* hele menubar med logo*/
+nav {
+  width: 100%;
+  height: 100px;
+  background-color: var(--blue);
+  overflow: auto;
+  border-style: solid;
+  border-width: thin;
+}
+
+/* menupunkter i menubar */
+nav ul {
+  padding: 20px;
+  margin: 0 0 0 300px;
+  list-style: none;
+}
+
+nav li {
+  float: left;
+}
+
+/* logo i menubar */
+.header img {
+  position: absolute;
+  margin-top: auto;
+  margin-left: 1px;
+}
+
+/* teksten i menubar */
+nav a {
+  width: 120px;
+  display: block;
+  padding: 20px 30px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  font-family: 'houschka-rounded', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* baggrundsbillede på forsiden = index */
+.baggrundsbillede img {
+  width: 100%;
+  height: auto;
+}
+
+/* Tekst forside: KEND DIT KØKKEN*/
+.text1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  animation: text 3s 1;
+}
+
+/* Tekst forside: inspiration til dit køkken*/
+.text2 {
+  position: absolute;
+  padding-top: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 50px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@keyframes text {
+  0% {
+    color: var(--blue);
+    margin-top: -40px;
+  }
+
+  30% {
+    letter-spacing: 15px;
+    margin-bottom: -40px;
+  }
+
+  85% {
+    letter-spacing: 8px;
+    margin-bottom: -40px;
+  }
+}
+
+p {
+  text-align: center;
+}
+
+/*billeder i OPSKRIFTER*/
+.op1, .op2, .op3, .op4 {
+  width: 100%;
+  height: auto;
+}
+
+/*KOLDHÆVEDE BOLLER*/
+.info, .fremgangsmode h4 {
+  text-align: center;
+}
+
+/*billede af koldhævede boller */
+.koldbolle {
+  width: 100%;
+  height: auto;
+}
+
+#koldover {
+  text-align: center;
+  border-bottom: solid;
+  border-width: thin;
+  line-height: 2.5;
+}
+
+aside {
+  float: right;
+  margin-right: 150px;
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: thin;
+}
+
+#fremgangsmode {
+  text-align: center;
+}
+
+#kold p {
+  line-height: 2.5;
+}
+
+/*tips og tricks underside */
+#ovEt {
+  text-align: center;
+}
+
+.tipstekst {
+  font-size: 20px;
+  border-top: solid;
+  border-width: thin;
+  line-height: 2.5;
+}
+
+.tips {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  opacity: 50%;
+}
+
+#tips {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.tip1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 1080px;
+  padding-top: 50px;
+}
+
+.tip1 a {
+  text-decoration: none;
+}
+
+.tip2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-right: 360px;
+}
+
+.tip3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 360px;
+}
+
+.tip4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 1080px;
+}
+
+/*billeder i tips og tricks */
+.frys1, .frys2, .frys3, .frys4 {
+  width: 100%;
+  height: auto;
+}
+
+/*FOOTER det hele på siden*/
+.container, .container ul, .footer-col, .footer-col h4::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* tekst boksene */
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.rows {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container ul {
+  list-style: none;
+}
+
+/* hele footeren*/
+.footer {
+  background-color: #24262b;
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.5;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 35px;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 12px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/*små undertekster*/
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+/* mine social media links */
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px) {
+  .footer-col {
+    width: 25%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+.copyright {
+  color: white;
+}
